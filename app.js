@@ -33,13 +33,13 @@ app.post('/api/user/', function (req, res) {
 })
 
 app.get('/api/user/', function (req, res) {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/javascript');
-    const responseBody = JSON.stringify(users);
-    res.send(responseBody);
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/javascript')
+    const responseBody = JSON.stringify(users)
+    res.send(responseBody)
     res.end(responseBody)
 });
 
 app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
-});
+    console.log('Example app listening on port 3000!')
+})

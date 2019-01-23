@@ -9,22 +9,77 @@
 <body>
     <form id="user-create-form">
         <!-- Add user input fields here -->
-        <label for="">Username: </label>
-        <input id="username" type="text"><br/><br/>
+        <fieldset>
+          <label for="">Username: </label>
+          <input id="username" type="text" autofocus><br/><br/>
+          
+          <label for="">Email: </label>
+          <input id="email" type="email"><br/><br/>
+          
+          <label for="">First Name: </label>
+          <input id="first-name" type="text"><br/><br/>
+          
+          <label for="">Last Name: </label>
+          <input id="last-name" type="text"><br/><br/>
+          
+          <label for="">Age: </label>
+          <input id="age" type="text"><br/><br/>
+          
+          <label for="">Mobile Phone: </label>
+          <input id="phone" type="tel"><br/><br/>
+          
+          <label for="">Portfolio Site: </label>
+          <input id="site" type="url"><br/><br/>
+        </fieldset>
+          
+        <fieldset>
+          <legend>How would you like us to contact you?</legend>
+          <ul>
+            <li>
+              <label for="phone">Phone</label>
+              <input type="radio" checked id="phone" name="contact" value="phone">
+            </li>
+            <li>
+              <label for="email">Email</label>
+              <input type="radio" id="email" name="contact" value="email">
+            </li>
+            <li>
+              <label for="text">Text</label>
+              <input type="radio" id="text" name="contact" value="text">
+            </li>
+          </ul>
+        </fieldset>
 
-        <label for="">Email: </label>
-        <input id="email" type="email"><br/><br/>
+        <fieldset>
+          <legend>Devices Used</legend>
+          <div>
+            <input type="checkbox" id="iOS" name="devices" value="iOS">
+            <label for="iOS">iOS</label>
+          </div>
+          <div>
+            <input type="checkbox" id="android" name="devices" value="Android">
+            <label for="android">Android</label>
+          </div>
+          <div>
+            <input type="checkbox" id="mac" name="devices" value="Mac">
+            <label for="mac">Mac</label>
+          </div>
+          <div>
+            <input type="checkbox" id="windows" name="devices" value="Windows">
+            <label for="windows">Windows</label>
+          </div>
+        </fieldset>
 
-        <label for="">First Name: </label>
-        <input id="first-name" type="text"><br/><br/>
+        <fieldset>
+          <select multiple id="user-type">
+            <option value="user">User</option>
+            <option value="moderator">Moderator</option>
+            <option value="administrator">Administrator</option>
+          </select>
+        </fieldset>
 
-        <label for="">Last Name: </label>
-        <input id="last-name" type="text"><br/><br/>
-
-        <label for="">Age: </label>
-        <input id="age" type="text"><br/><br/>
-
-        <button type="submit">Create User</button>
+        <button type="submit" id="submit">Create User</button>
+        <button type="reset" id="reset">Reset</button>
     </form>
 
     <h1 id="response"></h1>
