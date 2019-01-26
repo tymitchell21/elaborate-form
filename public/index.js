@@ -16,6 +16,7 @@ userCreateForm.addEventListener('submit', function(e) {
     const mobile = document.getElementById('phone').value
     const site = document.getElementById('site').value
     const contactRadios = document.querySelector('input[name="contact"]:checked').value
+    const time = document.querySelector('#time').value
     let devices = document.querySelectorAll('input[name="devices"]:checked')
     devices = Array.from(devices).map(x => {return x.value})
     const userType = document.querySelector('#user-type').value
@@ -29,6 +30,7 @@ userCreateForm.addEventListener('submit', function(e) {
         mobile: mobile,
         site: site,
         contactMethod: contactRadios,
+        time: time,
         devices: devices,
         userType: userType
     }
@@ -53,7 +55,7 @@ userCreateForm.addEventListener('submit', function(e) {
     })
 })
 
-userCreateForm.addEventListener('submit', function(e) {
+userCreateForm.addEventListener('reset', function(e) {
     const username = document.getElementById('username').value = ''
     const email = document.getElementById('email').value = ''
     const firstName = document.getElementById('first-name').value = ''

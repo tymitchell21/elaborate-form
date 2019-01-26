@@ -8,7 +8,6 @@
 </head>
 <body>
     <form id="user-create-form">
-        <!-- Add user input fields here -->
         <fieldset>
           <label for="">Username: </label>
           <input id="username" type="text" autofocus><br/><br/>
@@ -29,7 +28,7 @@
           <input id="phone" type="tel"><br/><br/>
           
           <label for="">Portfolio Site: </label>
-          <input id="site" type="url"><br/><br/>
+          <input id="site" type="url" disabled><br/><br/>
         </fieldset>
           
         <fieldset>
@@ -48,6 +47,9 @@
               <input type="radio" id="text" name="contact" value="text">
             </li>
           </ul>
+
+          <label>What is the best time of day to call you?</label>
+          <input type="time" name="time" id="time">
         </fieldset>
 
         <fieldset>
